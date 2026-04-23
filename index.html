@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arvish Technologies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="font-sans">
+    <div class="w-full overflow-hidden">
+      <div
+        id="menu-overlay"
+        class="fixed inset-0 bg-black/40 z-40"
+        onclick="closeMenu()"
+      ></div>
+
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 h-full w-[85vw] max-w-[360px] bg-white z-50 flex flex-col"
+        style="box-shadow: 4px 0 24px rgba(0, 0, 0, 0.13)"
+      >
+        <div
+          class="flex items-center justify-between px-5 py-4 border-b border-black/10"
+        >
+          <div class="flex items-center gap-2.5">
+            <div
+              class="rounded-full overflow-hidden flex-shrink-0"
+              style="width: 34px; height: 34px"
+            >
+              <img
+                src="./images/logo.png"
+                alt="Logo"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="text-[13.5px] font-semibold text-black tracking-wide"
+              >Arvish Technologies</span
+            >
+          </div>
+          <img
+            onclick="closeMenu()"
+            src="./images/close.png"
+            class="w-3.5"
+            alt=""
+          />
+        </div>
+        <div class="flex-1 px-5 pt-6 pb-4 flex flex-col">
+          <a
+            href="#"
+            class="mob-link text-[14.5px] font-medium text-black py-3 border-b border-black/[0.07] flex items-center justify-between nav-active"
+          >
+            Home
+            <img src="./images/next.png" class="w-3" alt="" />
+          </a>
+          <a
+            href="#"
+            class="mob-link text-[14.5px] font-medium text-black/75 py-3 border-b border-black/[0.07] flex items-center justify-between"
+          >
+            Services
+            <img src="./images/next.png" class="w-3" alt="" />
+          </a>
+          <a
+            href="#"
+            class="mob-link text-[14.5px] font-medium text-black/75 py-3 border-b border-black/[0.07] flex items-center justify-between"
+          >
+            Assignment Help
+            <img src="./images/next.png" class="w-3" alt="" />
+          </a>
+          <a
+            href="#"
+            class="mob-link text-[14.5px] font-medium text-black/75 py-3 border-b border-black/[0.07] flex items-center justify-between"
+          >
+            IT Solutions
+            <img src="./images/next.png" class="w-3" alt="" />
+          </a>
+          <a
+            href="#"
+            class="mob-link text-[14.5px] font-medium text-black/75 py-3 flex items-center justify-between"
+          >
+            About Us
+            <img src="./images/next.png" class="w-3" alt="" />
+          </a>
+        </div>
+        <div class="px-5 pb-8 flex flex-col gap-2.5">
+          <button
+            class="w-full border border-black bg-transparent text-black rounded px-4 py-2.5 text-[13px] font-medium tracking-wide transition hover:bg-black hover:text-white cursor-pointer"
+          >
+            Our Work
+          </button>
+          <button
+            class="w-full bg-black text-white rounded px-4 py-2.5 text-[13px] font-medium tracking-wide transition hover:bg-transparent hover:text-black border border-transparent hover:border-black cursor-pointer"
+          >
+            Contact Us
+          </button>
+          <p class="text-[11px] text-black/40 text-center mt-1">
+            info@arvistech.com · +91 98765 43210
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="topbar-animate bg-black border-b border-white/[0.08] px-5 md:px-12 py-3 flex items-center justify-between"
+      >
+        <div class="flex gap-4 md:gap-6 items-center">
+          <div
+            class="flex items-center gap-1.5 text-xs font-light text-[#eee] tracking-wide"
+          >
+            <div class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></div>
+            <span class="text-[12px] md:text-[13px] font-medium">
+              info@arvistech.com</span
+            >
+          </div>
+          <div
+            class="hidden sm:flex items-center gap-1.5 text-xs font-light text-[#eee] tracking-wide"
+          >
+            <div class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink"></div>
+            <span class="text-[13px] font-medium">+91 98765 43210</span>
+          </div>
+        </div>
+        <div
+          class="hidden sm:block text-xs font-light text-white/90 font-medium tracking-wide"
+        >
+          Mon – Sat &nbsp;|&nbsp; 9:00 AM – 7:00 PM IST
+        </div>
+        <div class="sm:hidden text-[11px] text-white/70">Mon–Sat 9AM–7PM</div>
+      </div>
+
+      <nav
+        class="navbar-animate flex items-center justify-between px-5 md:px-12 py-[14px] md:py-[18px] border-b border-white/[0.07] relative z-10"
+      >
+        <div class="flex items-center gap-3.5">
+          <div
+            class="rounded-full overflow-hidden"
+            style="width: 46px; height: 46px"
+          >
+            <img
+              src="./images/logo.png"
+              alt="Arvish Technologies Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <ul class="hidden md:flex items-center gap-9 list-none">
+          <li>
+            <a
+              href="#"
+              class="text-[15px] font-medium text-black tracking-wide relative nav-active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[15px] font-medium text-black tracking-wide relative"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[15px] font-medium text-black tracking-wide relative"
+              >Assignment Help</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[15px] font-medium text-black tracking-wide relative"
+              >IT Solutions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[15px] font-medium text-black tracking-wide relative"
+              >About Us</a
+            >
+          </li>
+        </ul>
+        <div class="hidden md:flex items-center gap-3.5">
+          <button
+            class="border border-black bg-transparent text-black rounded px-[22px] py-[9px] text-[13px] font-medium font-sans tracking-wide transition-all duration-200 hover:bg-black hover:text-white cursor-pointer"
+          >
+            Our Work
+          </button>
+          <button
+            class="bg-black text-[#fff] rounded px-[22px] py-[9px] text-[13px] font-medium font-sans tracking-wide transition-all duration-200 hover:bg-transparent hover:text-black border border-transparent hover:border-black cursor-pointer"
+          >
+            Contact Us
+          </button>
+        </div>
+        <button
+          id="ham-btn"
+          onclick="toggleMenu()"
+          class="md:hidden flex flex-col justify-center gap-[5.5px] w-9 h-9 items-center cursor-pointer bg-transparent border-none p-0"
+          aria-label="Open menu"
+        >
+          <img class="w-6" src="./images/menu.png" alt="" />
+        </button>
+      </nav>
+
+      <div
+        class="mx-1.5 md:mx-2 relative overflow-hidden rounded-xl font-[Inter] flex flex-col"
+      >
+        <div
+          class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_60%_50%,rgba(196,160,98,0.06)_0%,transparent_70%)]"
+        ></div>
+
+        <div class="flex flex-col md:flex-row flex-1">
+          <div
+            class="flex-1 px-5 md:px-9 py-8 md:py-11 md:border-r border-black/[0.07] relative"
+          >
+            <div
+              class="badge-animate inline-flex items-center gap-2 border border-black/40 rounded-full px-3 py-1 mb-5 md:mb-6"
+            >
+              <div class="w-1.5 h-1.5 rounded-full bg-black/90"></div>
+              <span
+                class="text-[10px] tracking-[2px] uppercase text-black/70 font-medium"
+                >Trusted by 500+ Clients</span
+              >
+            </div>
+
+            <h1
+              class="heading-animate font-[Playfair_Display] text-[28px] sm:text-[38px] md:text-[52px] leading-[1.15] text-black font-semibold mb-2"
+            >
+              Excellence in <br />
+              <em class="italic text-black">Academic & Digital</em>
+              <span class="block text-black">Solutions</span>
+            </h1>
+
+            <p
+              class="desc-animate text-[13.5px] md:text-[16px] text-black max-w-[580px] mt-4 md:mt-5 mb-6 md:mb-8 leading-relaxed"
+            >
+              From complex assignments to enterprise IT systems — Arvish
+              Technologies delivers precision, speed, and results that matter.
+              Your success is our standard.
+            </p>
+
+            <div
+              class="herobtn-animate flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-5"
+            >
+              <button
+                class="hero-cta-primary bg-[#000] text-white px-6 py-3 rounded-md text-[13px] font-medium hover:opacity-90 transition text-center w-full sm:w-auto"
+              >
+                Get Free Consultation
+              </button>
+              <button
+                class="hero-cta-secondary flex items-center justify-center gap-2 border border-black px-5 py-3 rounded-md text-black text-[13px] hover:bg-black hover:text-[#fff] transition w-full sm:w-auto"
+              >
+                View Services
+                <img class="w-3" src="./images/next.png" alt="" />
+              </button>
+            </div>
+
+            <div class="mt-7 md:mt-9 pt-6 md:pt-7 border-t border-black/[0.07]">
+              <div class="grid grid-cols-2 gap-0 md:hidden">
+                <div
+                  class="stat-animate-1 text-center py-3 border-r border-b border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-[22px] font-[Playfair_Display]"
+                  >
+                    500+
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1px] uppercase mt-1"
+                  >
+                    Clients
+                  </div>
+                </div>
+                <div
+                  class="stat-animate-2 text-center py-3 border-b border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-[22px] font-[Playfair_Display]"
+                  >
+                    98%
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1px] uppercase mt-1"
+                  >
+                    Satisfaction
+                  </div>
+                </div>
+                <div
+                  class="stat-animate-3 text-center py-3 border-r border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-[22px] font-[Playfair_Display]"
+                  >
+                    24h
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1px] uppercase mt-1"
+                  >
+                    Turnaround
+                  </div>
+                </div>
+                <div class="stat-animate-4 text-center py-3">
+                  <div
+                    class="stat-num-hover text-[#000] text-[22px] font-[Playfair_Display]"
+                  >
+                    5yr
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1px] uppercase mt-1"
+                  >
+                    Experience
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:flex">
+                <div
+                  class="stat-animate-1 flex-1 text-center border-r border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-xl font-[Playfair_Display]"
+                  >
+                    500+
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1.5px] uppercase mt-1"
+                  >
+                    Clients
+                  </div>
+                </div>
+                <div
+                  class="stat-animate-2 flex-1 text-center border-r border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-xl font-[Playfair_Display]"
+                  >
+                    98%
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1.5px] uppercase mt-1"
+                  >
+                    Satisfaction
+                  </div>
+                </div>
+                <div
+                  class="stat-animate-3 flex-1 text-center border-r border-black/[0.07]"
+                >
+                  <div
+                    class="stat-num-hover text-[#000] text-xl font-[Playfair_Display]"
+                  >
+                    24h
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1.5px] uppercase mt-1"
+                  >
+                    Turnaround
+                  </div>
+                </div>
+                <div class="stat-animate-4 flex-1 text-center">
+                  <div
+                    class="stat-num-hover text-[#000] text-xl font-[Playfair_Display]"
+                  >
+                    5yr
+                  </div>
+                  <div
+                    class="text-[10px] text-black/60 tracking-[1.5px] uppercase mt-1"
+                  >
+                    Experience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-5 md:px-0 flex">
+            <div
+              class="md:w-[240px] flex flex-col border-t md:border-t-0 border-black/[0.07]"
+            >
+              <div
+                class="grid grid-cols-2 pt-6 lg:pt-0 md:grid-cols-1 md:flex md:flex-col md:h-full"
+              >
+                <div
+                  class="card-animate-1 group relative px-4 md:px-6 py-4 md:py-5 border-b border-r md:border-r-0 border-black/[0.07] cursor-pointer hover:bg-[#c4a062]/5 transition md:flex-1"
+                >
+                  <div
+                    class="absolute left-0 top-0 bottom-0 w-[2px] bg-[#000] scale-y-0 group-hover:scale-y-100 origin-bottom transition"
+                  ></div>
+                  <div
+                    class="card-icon-wrap w-8 h-8 rounded-lg bg-[#808080]/10 flex items-center justify-center mb-2 md:mb-3"
+                  >
+                    <img class="w-5 md:w-6" src="./images/help.png" alt="" />
+                  </div>
+                  <div
+                    class="text-black text-[12px] md:text-sm font-medium leading-snug"
+                  >
+                    Assignment Help
+                  </div>
+                  <div
+                    class="text-black/60 text-[10px] md:text-xs mt-0.5 leading-snug"
+                  >
+                    <p class="lg:hidden">Academic writing & research support</p>
+                    <p class="hidden lg:block">
+                      Struggling with deadlines? Get reliable, well-structured
+                      assignments crafted by experts.
+                    </p>
+                  </div>
+                  <span
+                    class="absolute right-4 top-1/2 -translate-y-1/2 text-[#000] opacity-0 group-hover:opacity-100 group-hover:right-3 transition-all duration-300 hidden md:block"
+                  >
+                    <img class="w-4 opacity-70" src="./images/next.png" alt=""
+                  /></span>
+                </div>
+
+                <div
+                  class="card-animate-2 group relative px-4 md:px-6 py-4 md:py-5 border-b border-black/[0.07] cursor-pointer hover:bg-[#c4a062]/5 transition md:flex-1"
+                >
+                  <div
+                    class="absolute left-0 top-0 bottom-0 w-[2px] bg-[#000] scale-y-0 group-hover:scale-y-100 origin-bottom transition"
+                  ></div>
+                  <div
+                    class="card-icon-wrap w-8 h-8 rounded-lg bg-[#808080]/10 flex items-center justify-center mb-2 md:mb-3"
+                  >
+                    <img
+                      class="w-5 md:w-6"
+                      src="./images/computing.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="text-black text-[12px] md:text-sm font-medium leading-snug"
+                  >
+                    IT Solutions
+                  </div>
+                  <div
+                    class="text-black/60 text-[10px] md:text-xs mt-0.5 leading-snug"
+                  >
+                    <p class="lg:hidden">Web, software & cloud services</p>
+
+                    <p class="hidden lg:block">
+                      Customized IT services focused on performance, security,
+                      and seamless digital experience
+                    </p>
+                  </div>
+                  <span
+                    class="absolute right-4 top-1/2 -translate-y-1/2 text-[#000] opacity-0 group-hover:opacity-100 group-hover:right-3 transition-all duration-300 hidden md:block"
+                  >
+                    <img class="w-4 opacity-70" src="./images/next.png" alt=""
+                  /></span>
+                </div>
+
+                <div
+                  class="card-animate-3 group relative px-4 md:px-6 py-4 md:py-5 border-r md:border-r-0 border-black/[0.07] cursor-pointer hover:bg-[#c4a062]/5 transition md:flex-1"
+                >
+                  <div
+                    class="absolute left-0 top-0 bottom-0 w-[2px] bg-[#000] scale-y-0 group-hover:scale-y-100 origin-bottom transition"
+                  ></div>
+                  <div
+                    class="card-icon-wrap w-8 h-8 rounded-lg bg-[#808080]/10 flex items-center justify-center mb-2 md:mb-3"
+                  >
+                    <img
+                      class="w-5 md:w-6"
+                      src="./images/technical-support.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="text-black text-[12px] md:text-sm font-medium leading-snug"
+                  >
+                    IT Consulting
+                  </div>
+                  <div
+                    class="text-black/60 text-[10px] md:text-xs mt-0.5 leading-snug"
+                  >
+                    <p class="lg:hidden">Strategy, security & infrastructure</p>
+                    <div class="hidden lg:block">
+                      <p>
+                        Expert IT consulting to guide your business with smart,
+                        scalable technology decisions
+                      </p>
+                    </div>
+                  </div>
+                  <span
+                    class="absolute right-4 top-1/2 -translate-y-1/2 text-[#000] opacity-0 group-hover:opacity-100 group-hover:right-3 transition-all duration-300 hidden md:block"
+                  >
+                    <img
+                      class="w-4 opacity-70"
+                      src="./images/next.png"
+                      alt=""
+                    />
+                  </span>
+                </div>
+
+                <div
+                  class="md:hidden flex items-center justify-center px-4 py-4 border-black/[0.07]"
+                >
+                  <span
+                    class="text-[10px] text-black/30 tracking-wide uppercase"
+                    >More Soon</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("menu-overlay");
+        const btn = document.getElementById("ham-btn");
+        const isOpen = menu.classList.contains("open");
+        if (isOpen) {
+          menu.classList.remove("open");
+          overlay.classList.remove("open");
+          btn.classList.remove("ham-open");
+          document.body.style.overflow = "";
+        } else {
+          menu.classList.add("open");
+          overlay.classList.add("open");
+          btn.classList.add("ham-open");
+          document.body.style.overflow = "hidden";
+        }
+      }
+      function closeMenu() {
+        document.getElementById("mobile-menu").classList.remove("open");
+        document.getElementById("menu-overlay").classList.remove("open");
+        document.getElementById("ham-btn").classList.remove("ham-open");
+        document.body.style.overflow = "";
+      }
+    </script>
+  </body>
+</html>
