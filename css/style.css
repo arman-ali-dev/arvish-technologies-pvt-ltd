@@ -277,3 +277,27 @@ nav button:hover {
 .service-card:hover::before {
   transform: scaleY(1);
 }
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll animation */
+.srv-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+.srv-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
