@@ -301,3 +301,72 @@ nav button:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+.why-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.why-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gold top-border on card hover */
+.why-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2px;
+  background: #c4a062;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.why-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Featured card left-border */
+.why-featured-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #c4a062;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+.why-featured-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Pulsing gold dot */
+@keyframes pulseGold {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.pulse-gold {
+  animation: pulseGold 2.5s ease-in-out infinite;
+}
+
+/* Radial glow background */
+.why-glow {
+  background: radial-gradient(
+    ellipse 70% 50% at 80% 30%,
+    rgba(196, 160, 98, 0.07) 0%,
+    transparent 70%
+  );
+}

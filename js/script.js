@@ -35,3 +35,18 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 },
 );
 revealEls.forEach((el) => observer.observe(el));
+
+// Scroll reveal
+const whyRevealEls = document.querySelectorAll(".why-reveal");
+const whyObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        whyObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 },
+);
+whyRevealEls.forEach((el) => whyObserver.observe(el));
