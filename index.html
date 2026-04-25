@@ -20,7 +20,7 @@
 
     <div
       id="mobile-menu"
-      class="fixed top-0 left-0 h-full w-[85vw] max-w-[360px] bg-white z-50 flex flex-col"
+      class="fixed top-0 left-0 h-full w-[85vw] max-w-[360px] bg-white z-[999] flex flex-col"
       style="box-shadow: 4px 0 24px rgba(0, 0, 0, 0.13)"
     >
       <div
@@ -51,13 +51,15 @@
       <div class="flex-1 px-5 pt-6 pb-4 flex flex-col">
         <a
           href="#"
+          onclick="closeMenu()"
           class="mob-link text-[14.5px] font-medium text-black py-3 border-b border-black/[0.07] flex items-center justify-between nav-active"
         >
           Home
           <img src="./images/next.png" class="w-3" alt="" />
         </a>
         <a
-          href="#"
+          href="#services"
+          onclick="closeMenu()"
           class="mob-link text-[14.5px] font-medium text-black/75 py-3 border-b border-black/[0.07] flex items-center justify-between"
         >
           Services
@@ -78,7 +80,8 @@
           <img src="./images/next.png" class="w-3" alt="" />
         </a>
         <a
-          href="#"
+          href="#about"
+          onclick="closeMenu()"
           class="mob-link text-[14.5px] font-medium text-black/75 py-3 flex items-center justify-between"
         >
           About Us
@@ -97,7 +100,7 @@
           Contact Us
         </button>
         <p class="text-[11px] text-black/40 text-center mt-1">
-          info@arvistech.com · +91 98765 43210
+          18arvish@gmail.com · +91 97139 05806
         </p>
       </div>
     </div>
@@ -110,14 +113,13 @@
           class="flex items-center gap-1.5 text-xs font-light text-[#eee] tracking-wide"
         >
           <span class="text-[12px] md:text-[13px] font-medium">
-            info@arvistech.com</span
+            18arvish@gmail.com</span
           >
         </div>
         <div
           class="hidden sm:flex items-center gap-1.5 text-xs font-light text-[#eee] tracking-wide"
         >
-          <div class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink"></div>
-          <span class="text-[13px] font-medium">+91 98765 43210</span>
+          <span class="text-[13px] font-medium">+91 97139 05806</span>
         </div>
       </div>
       <div
@@ -130,7 +132,7 @@
 
     <nav
       id="header"
-      class="navbar-animate flex items-center justify-between px-5 md:px-12 py-[14px] md:py-[18px] border-b border-white/[0.07] w-full bg-white z-[9999999]"
+      class="navbar-animate flex items-center justify-between px-5 md:px-12 py-[14px] md:py-[18px] border-b border-white/[0.07] w-full bg-white z-[99]"
     >
       <div class="flex items-center gap-3.5">
         <div
@@ -154,7 +156,7 @@
         </li>
         <li>
           <a
-            href="#"
+            href="#services"
             class="text-[15px] font-medium text-black tracking-wide relative"
             >Services</a
           >
@@ -175,7 +177,7 @@
         </li>
         <li>
           <a
-            href="#"
+            href="#about"
             class="text-[15px] font-medium text-black tracking-wide relative"
             >About Us</a
           >
@@ -1496,6 +1498,299 @@
         </div>
       </div>
     </section>
+
+    <section id="about" class="bg-white relative overflow-hidden">
+      <div class="w-full h-px bg-black/[0.07]"></div>
+
+      <div class="px-5 md:px-12 py-16 md:py-24">
+        <div class="about-reveal mb-12 md:mb-16">
+          <div
+            class="inline-flex items-center gap-2 border border-black/35 rounded-full px-3 py-1 mb-5"
+          >
+            <div class="w-1.5 h-1.5 rounded-full bg-black/80 pulse-gold"></div>
+            <span
+              class="text-[10px] tracking-[2px] uppercase text-black/60 font-medium"
+              >About Us</span
+            >
+          </div>
+          <h2
+            class="font-[Playfair_Display] text-[30px] sm:text-[40px] md:text-[50px] leading-[1.2] text-black font-semibold max-w-[800px]"
+          >
+            Crafting Digital Experiences <br />
+            That <em class="italic text-[#c4a062]">Matter</em>
+          </h2>
+        </div>
+
+        <div
+          class="about-reveal grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5"
+          style="transition-delay: 0.08s"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black/[0.08] rounded-2xl overflow-hidden"
+          >
+            <div
+              class="relative bg-black/[0.02] border-b md:border-b-0 md:border-r border-black/[0.08] overflow-hidden min-h-[340px]"
+            >
+              <div class="ceo-img-wrap w-full h-full absolute inset-0">
+                <img
+                  src="./images/archi.jpeg"
+                  alt="Archi Sahni – CEO, Arvish Technologies"
+                  class="w-full h-full object-cover object-center"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+                ></div>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 right-0 p-5 md:px-6 md:py-5 z-10 bg-black/10 backdrop-blur-md"
+              >
+                <h3
+                  class="font-[Playfair_Display] block text-[20px] md:text-[24px] text-white font-semibold leading-tight about-name-line"
+                >
+                  Archi Sahni
+                </h3>
+                <p class="text-[11px] text-white/55 mt-1 tracking-wide">
+                  Arvish Technologies · Indore, India
+                </p>
+                <div
+                  class="inline-flex mt-2.5 items-center gap-1.5 bg-[#c4a062]/20 border border-[#c4a062]/30 rounded-full px-3 py-1"
+                >
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c4a062]"></div>
+                  <span
+                    class="text-[10px] text-[#c4a062] uppercase tracking-[1.5px] font-medium"
+                    >Founder & CEO</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 flex flex-col justify-between gap-5">
+              <div>
+                <p
+                  class="about-quote text-[12.5px] text-black/60 leading-[1.85] mb-3"
+                >
+                  We started Arvish Technologies with one belief — every student
+                  and every business deserves access to world-class expertise,
+                  without compromise.
+                </p>
+                <p class="text-[12px] text-black/45 leading-relaxed">
+                  Under Archi's leadership, the team has delivered thousands of
+                  projects spanning academic writing, custom software, web
+                  development, and enterprise IT consulting.
+                </p>
+              </div>
+
+              <div>
+                <p
+                  class="text-[10px] uppercase tracking-[2px] text-black/35 mb-2.5 font-medium"
+                >
+                  Expertise
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Academic Consulting</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >IT Strategy</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Business Growth</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Client Success</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-2">
+                <button
+                  class="flex-1 bg-black text-white border border-black rounded-md px-4 py-2 text-[12px] font-medium hover:bg-transparent hover:text-black transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                >
+                  Work With Us
+                </button>
+                <button
+                  class="flex-1 border border-black/20 text-black rounded-md px-4 py-2 text-[12px] font-medium hover:border-black transition-all duration-200 hover:-translate-y-0.5 cursor-pointer bg-transparent flex gap-1.5 items-center justify-center"
+                >
+                  Our Story <img src="./images/next.png" class="w-2" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CARD 2: Vishal Agrawal (MD) ── -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black/[0.08] rounded-2xl overflow-hidden"
+          >
+            <!-- Image -->
+            <div
+              class="relative bg-black/[0.02] border-b md:border-b-0 md:border-r border-black/[0.08] overflow-hidden min-h-[340px]"
+            >
+              <div class="ceo-img-wrap w-full h-full absolute inset-0">
+                <img
+                  src="./images/vishal.jpeg"
+                  alt="Vishal Agrawal – Managing Director, Arvish Technologies"
+                  class="w-full h-full object-cover object-top"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+                ></div>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 right-0 p-5 md:px-6 md:py-5 z-10 bg-black/10 backdrop-blur-md"
+              >
+                <h3
+                  class="font-[Playfair_Display] block text-[20px] md:text-[24px] text-white font-semibold leading-tight about-name-line"
+                >
+                  Vishal Agrawal
+                </h3>
+                <p class="text-[11px] text-white/55 mt-1 tracking-wide">
+                  Arvish Technologies · Indore, India
+                </p>
+                <div
+                  class="inline-flex mt-2.5 items-center gap-1.5 bg-[#c4a062]/20 border border-[#c4a062]/30 rounded-full px-3 py-1"
+                >
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#c4a062]"></div>
+                  <span
+                    class="text-[10px] text-[#c4a062] uppercase tracking-[1.5px] font-medium"
+                    >Managing Director</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 flex flex-col justify-between gap-5">
+              <div>
+                <p
+                  class="about-quote text-[12.5px] text-black/60 leading-[1.85] mb-3"
+                >
+                  My focus has always been on building systems that scale — from
+                  operations to technology, ensuring every client gets a
+                  seamless and consistent experience every time.
+                </p>
+                <p class="text-[12px] text-black/45 leading-relaxed">
+                  Vishal oversees the operational and technical backbone of
+                  Arvish Technologies, driving delivery excellence, team
+                  performance, and strategic IT partnerships.
+                </p>
+              </div>
+
+              <div>
+                <p
+                  class="text-[10px] uppercase tracking-[2px] text-black/35 mb-2.5 font-medium"
+                >
+                  Expertise
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Operations</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >IT Infrastructure</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Web Development</span
+                  >
+                  <span
+                    class="about-tag text-[10px] border border-black/15 rounded-md px-2.5 py-1 text-black/55 cursor-default"
+                    >Team Leadership</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-2">
+                <button
+                  class="flex-1 bg-black text-white border border-black rounded-md px-4 py-2 text-[12px] font-medium hover:bg-transparent hover:text-black transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                >
+                  Work With Us
+                </button>
+                <button
+                  class="flex-1 border border-black/20 text-black rounded-md px-4 py-2 text-[12px] font-medium hover:border-black transition-all duration-200 hover:-translate-y-0.5 cursor-pointer bg-transparent flex gap-1.5 items-center justify-center"
+                >
+                  Our Story <img src="./images/next.png" class="w-2" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="about-reveal mt-3 grid grid-cols-1 sm:grid-cols-3 border border-black/[0.08] rounded-xl overflow-hidden"
+          style="transition-delay: 0.2s"
+        >
+          <div
+            class="flex items-start gap-4 p-5 border-b sm:border-b-0 sm:border-r border-black/[0.08] hover:bg-black/[0.015] transition-colors duration-200"
+          >
+            <div
+              class="w-9 h-9 rounded-lg bg-black/[0.05] flex items-center justify-center flex-shrink-0 mt-0.5"
+            >
+              <img src="./images/security.png" class="w-4" alt="" />
+            </div>
+            <div>
+              <div class="text-[13px] font-semibold text-black mb-1">
+                Integrity First
+              </div>
+              <p class="text-[11.5px] text-black/45 leading-relaxed">
+                We do what we say, and say what we do. Every promise made is a
+                promise kept.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-start gap-4 p-5 border-b sm:border-b-0 sm:border-r border-black/[0.08] hover:bg-black/[0.015] transition-colors duration-200"
+          >
+            <div
+              class="w-9 h-9 rounded-lg bg-black/[0.05] flex items-center justify-center flex-shrink-0 mt-0.5"
+            >
+              <img src="./images/star.png" class="w-4" alt="" />
+            </div>
+            <div>
+              <div class="text-[13px] font-semibold text-black mb-1">
+                Excellence Always
+              </div>
+              <p class="text-[11.5px] text-black/45 leading-relaxed">
+                Good enough is never enough. We push for precision and quality
+                in every deliverable.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-start gap-4 p-5 hover:bg-black/[0.015] transition-colors duration-200"
+          >
+            <div
+              class="w-9 h-9 rounded-lg bg-black/[0.05] flex items-center justify-center flex-shrink-0 mt-0.5"
+            >
+              <img src="./images/user (1).png" class="w-4" alt="" />
+            </div>
+            <div>
+              <div class="text-[13px] font-semibold text-black mb-1">
+                Client-Centric
+              </div>
+              <p class="text-[11.5px] text-black/45 leading-relaxed">
+                Your goals are our goals. Every decision we make puts your
+                success at the center.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center border-t border-black/10">
+      <p class="text-sm text-gray-600">
+        © 2026 Arvish Technologies Pvt. Ltd. All rights reserved.
+      </p>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>

@@ -76,3 +76,17 @@ window.onscroll = () => {
   header.classList.toggle("shadow", scrolled);
   header.classList.toggle("relative", !scrolled);
 };
+
+const aboutRevealEls = document.querySelectorAll(".about-reveal");
+const aboutObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 },
+);
+aboutRevealEls.forEach((el) => aboutObserver.observe(el));

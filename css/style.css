@@ -4,6 +4,10 @@
   font-family: "Lexend", sans-serif;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 @keyframes fadeSlideDown {
   from {
     opacity: 0;
@@ -487,4 +491,95 @@ nav button:hover {
 }
 .process-cta-btn:hover {
   transform: translateY(-2px);
+}
+
+/* Scroll reveal */
+.about-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+.about-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CEO image hover */
+.ceo-img-wrap {
+  transition: transform 0.35s ease;
+}
+.ceo-img-wrap:hover {
+  transform: scale(1.02);
+}
+
+/* Stat card hover */
+.about-stat {
+  transition:
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+.about-stat:hover {
+  background: rgba(196, 160, 98, 0.07) !important;
+  transform: translateY(-2px);
+}
+
+/* Signature underline animation */
+.about-name-line {
+  position: relative;
+  display: inline-block;
+}
+.about-name-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #c4a062;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+}
+.about-name-line:hover::after {
+  transform: scaleX(1);
+}
+
+/* Quote marks */
+.about-quote::before {
+  content: "\201C";
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.07);
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 4px;
+}
+
+/* Tag pill */
+.about-tag {
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+.about-tag:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(196, 160, 98, 0.06);
+}
+
+/* Pulse */
+@keyframes pulseGold {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.pulse-gold {
+  animation: pulseGold 2.5s ease-in-out infinite;
 }
