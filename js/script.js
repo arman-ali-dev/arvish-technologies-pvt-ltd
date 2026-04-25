@@ -65,3 +65,16 @@ const processObserver = new IntersectionObserver(
   { threshold: 0.1 },
 );
 processRevealEls.forEach((el) => processObserver.observe(el));
+
+const header = document.getElementById("header");
+
+window.onscroll = function () {
+  if (window.scrollY > 0) {
+    header.classList.remove("relative");
+    header.classList.add("fixed");
+    header.classList.add("top-0");
+  } else {
+    header.classList.remove("fixed");
+    header.classList.add("relative");
+  }
+};
