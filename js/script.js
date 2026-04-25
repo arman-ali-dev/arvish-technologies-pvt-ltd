@@ -50,3 +50,18 @@ const whyObserver = new IntersectionObserver(
   { threshold: 0.1 },
 );
 whyRevealEls.forEach((el) => whyObserver.observe(el));
+
+// Scroll reveal for process section
+const processRevealEls = document.querySelectorAll(".process-reveal");
+const processObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        processObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 },
+);
+processRevealEls.forEach((el) => processObserver.observe(el));
