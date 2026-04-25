@@ -68,13 +68,11 @@ processRevealEls.forEach((el) => processObserver.observe(el));
 
 const header = document.getElementById("header");
 
-window.onscroll = function () {
-  if (window.scrollY > 0) {
-    header.classList.remove("relative");
-    header.classList.add("fixed");
-    header.classList.add("top-0");
-  } else {
-    header.classList.remove("fixed");
-    header.classList.add("relative");
-  }
+window.onscroll = () => {
+  const scrolled = window.scrollY > 0;
+
+  header.classList.toggle("fixed", scrolled);
+  header.classList.toggle("top-0", scrolled);
+  header.classList.toggle("shadow", scrolled);
+  header.classList.toggle("relative", !scrolled);
 };
